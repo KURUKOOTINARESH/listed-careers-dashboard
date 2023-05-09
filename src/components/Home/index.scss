@@ -1,0 +1,262 @@
+$dark : #000000;
+$light : #F5F5F5;
+$white : #ffffff;
+
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin latoText{
+    font-family: 'Lato';
+    font-style: normal;
+}
+
+@mixin montserratText{
+    font-family: 'Montserrat';
+    font-style: normal;
+}
+
+.home{
+    padding: 40px;
+    background-color: $light;
+    display: flex;
+    &__content-container{
+        padding-left: 60px;
+        padding-right: 20px;
+        width: 80%;
+    }
+}
+.home__header-container{
+    display: flex;
+    justify-content: space-between;
+    &--title{
+        @include montserratText();
+        font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    }
+}
+.header-right-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 24%;
+}
+.search-container{
+    width: 180px;
+    height: 30px;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: $white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    &__inputfield{
+        border: 0px;
+        width: 80%;
+        @include latoText();
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #B0B0B0;
+    }
+    &__icon{
+        font-size: 14px;
+    }
+}
+.profile-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 24px;
+}
+.statics-wrapper{
+    list-style-type: none;
+    padding-left: 0px;
+    margin: 0px;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.static-card{
+    width: 220px;
+    height: 120px;
+    border-radius: 20px;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    &__name{
+        @include latoText();
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    &__value{
+        @include montserratText();
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+    }
+    &__icon{
+        font-size: 24px;
+        align-self: flex-end;
+    }
+}
+
+.activities-wrapper{
+    background-color: $white;
+    border-radius: 20px;
+    height: 360px;
+    width: 100%;
+    margin: 40px 0px;
+    padding: 40px;
+    box-sizing: border-box;
+    &__title{
+        margin: 0px;
+        @include montserratText();
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+.data-cards-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.data-card-container{
+    background-color: $white;
+    border-radius: 20px;
+    width: 480px;
+    height: 260px;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    &__top-section{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__date-selector{
+        border: 0px;
+        cursor: pointer;
+        @include montserratText();
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #858585;
+    }
+    &__see-all{
+        display: flex;
+        align-items: center;
+    }
+    &__content-container{
+        &--basic-tees::marker {
+            width: 48px;
+            height: 48px;
+            color: red;
+        }
+    }
+    &__chart-container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+.piechart{
+    transform: rotate(90deg);
+    width: 145px;
+    height: 145px;
+}
+.text-box{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    &__name{
+        @include montserratText();
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    &__value{
+        @include latoText();
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #858585;
+    }
+}
+.basic-tees::marker{
+    color: #98D89E;
+}
+.custom-short-pants::marker{
+    color: #F6DC7D;
+}
+.super-hoodies::marker{
+    color: #EE8484;
+}
+.schedule-container{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.schedule-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-left: 2px ;
+    width: 250px;
+    height: 66px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    &__meeting{
+        @include latoText();
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: #666666;
+        margin: 0px;
+        margin-bottom: 4px
+    }
+    &__text{
+        @include latoText();
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #999999;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .home{
+        flex-direction: column;
+        padding: 0px;
+    }
+    .statics-wrapper{
+        flex-wrap: wrap;
+        
+    }
+    .header-right-section{
+        width: 50%;
+    }
+    .static-card{
+        margin: 20px;
+    }
+    .data-cards-wrapper{
+        flex-direction: column;
+    }
+    .data-card-container{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+

@@ -1,0 +1,28 @@
+.page{
+    padding: 40px;
+    display: flex;
+    height: 100vh;
+    &__content-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+    }
+}
+@media screen and (max-width : 768px) {
+    .page{
+        padding: 0px;
+        flex-direction: column;
+        &__content-container{
+            height: 100%;
+            width: 100%;
+            
+        }
+    }
+    
+}

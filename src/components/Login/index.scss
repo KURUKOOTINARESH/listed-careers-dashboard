@@ -1,0 +1,174 @@
+$dark : #000000;
+$light : #F5F5F5;
+$white : #ffffff;
+
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin latoText{
+    font-family: 'Lato';
+    font-style: normal;
+}
+
+@mixin montserratText{
+    font-family: 'Montserrat';
+    font-style: normal;
+}
+
+.login-page{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+.header-section{
+    @include flexCenter();
+    width: 40%;
+    background-color: $dark;
+    &__text{
+        @include montserratText();
+        color: $white;
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 88px;
+    }
+}
+
+.login-section{
+    @include flexCenter();
+    flex-direction: column;
+    width: 60%;
+    background-color: $light;
+    &__title{
+        @extend .header-section__text;
+        color: $dark;
+        font-size: 36px;
+        line-height: 44px;
+    }
+    &__description{
+        @include latoText();
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+.login-widgets-wrapper{
+    display: flex;
+    margin : 24px 0px;
+}
+
+.login-widget-button{
+    @include flexCenter();
+    background-color: $white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+    width: 180px;
+    height: 30px;
+    margin-right: 24px;
+    gap:8px;
+    &__icon{
+        font-size: 12px;
+    }
+    &__text{
+        @include montserratText();
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #858585;
+        
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.login-form{
+    background-color: $white;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 380px;
+    height: 320px;
+    padding: 30px 0px;
+    padding-right: 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
+    &__fieldcontainer{
+        margin-bottom: 20px;
+    }
+    &__label{
+        @include latoText();
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    &__inputfield{
+        width: 325px;
+        height: 40px;
+        border: 0px;
+        background: #F5F5F5;
+        border-radius: 10px;
+        margin-top: 10px;
+        padding-left: 16px;
+        box-sizing: border-box;
+    }
+    &__forgot-text{
+        @include latoText();
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #346BD5;
+        text-decoration: none;
+        margin-bottom: 20px;
+        align-self: flex-start;
+        margin-left: 30px;
+    }
+    &__button{
+        width: 325px;
+        height: 40px;
+        background-color: $dark;
+        border: 0px;
+        border-radius: 10px;
+        color: $white;
+        @include montserratText();
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.regester-account-text{
+    @include latoText();
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #858585;
+    &__link{
+        color: #346BD5;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .login-page{
+        flex-direction: column;
+    }
+    .header-section{ 
+        width: 100%;
+    }
+    
+    .login-section{
+        width: 100%;
+        height: 100%;
+        background-color: $light;
+    }
+}

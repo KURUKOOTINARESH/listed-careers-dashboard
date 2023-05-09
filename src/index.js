@@ -3,11 +3,41 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createSlice, configureStore } from '@reduxjs/toolkit'
+import { Provider } from "react-redux";
+
+const tokenSlice = createSlice({
+  name: 'token',
+  initialState: {
+    token: {
+      name : "",
+      email : "",
+      profilePic : "",
+    },
+    activePage: "home"
+  },
+  reducers: {
+    setToken: (state,action) => {
+      state.token = action.payload.token
+    },
+    setActivePage: (state,action) => {
+      state.activePage = action.payload.activePage
+    },
+  }
+})
+
+export const {setToken, setActivePage} = tokenSlice.actions
+
+const store = configureStore({
+  reducer: tokenSlice.reducer
+})
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 
