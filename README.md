@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Getting Started with Create React App![desktop_view1](https://github.com/KURUKOOTINARESH/listed-careers-dashboard/assets/30923105/70e9846a-b322-411f-bc30-abe20ea776f1)
+![desktop_view2](https://github.com/KURUKOOTINARESH/listed-careers-dashboard/assets/30923105/5aa7a842-489c-423a-a8d0-18440dc930d4)
+
+![desktop_view3](https://github.com/KURUKOOTINARESH/listed-careers-dashboard/assets/30923105/22f1ef43-0fbf-43b5-bcd6-825292ccbc09)
+![mobile_view1](https://github.com/KURUKOOTINARESH/listed-careers-dashboard/assets/30923105/2aea8d8e-85eb-4761-b2f3-6bd7f0052fa4)
+![mobile_view2](https://github.com/KURUKOOTINARESH/listed-careers-dashboard/assets/30923105/33a4f5e4-a18c-4718-b5a7-1386125b7f1c)
+![mobile_view3](https://github.com/KURUKOOTINARESH/listed-careers-dashboard/assets/30923105/7f5ff47c-da31-4f80-addf-e11e8cc062ad)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
